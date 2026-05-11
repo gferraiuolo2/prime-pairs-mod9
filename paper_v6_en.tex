@@ -60,10 +60,14 @@ agrees with $H(g)/6$ within $\pm 0.8\%$ at $x = 10^7$. The ratio
 $\pi(x;g)/\bigl(H(g)\,\mathrm{li}_2(x)\bigr)$ converges to $1$ within
 $\pm 0.15\%$ at $x = 5\cdot 10^7$ for all tested $k$, including
 $g=216$ ($k=12$), whose constant $H(g) = 4 C_2$ is the smallest in the
-sample. The results confirm Hardy--Littlewood in arithmetic progressions
-quantitatively within the tested regime, and show that the
-$\dr$-mod-$9$ classification is a sensitive empirical probe that does
-\emph{not} reveal deviations from the Hardy--Littlewood prediction.
+sample. The observed deviation magnitude $|\rho - 1| \lesssim 10^{-3}$
+is consistent with a square-root error term $X^{-1/2} \log X$, which
+matches the function-field analogues established unconditionally by
+Keating--Rudnick and Sawin--Shusterman. The results confirm
+Hardy--Littlewood in arithmetic progressions quantitatively within
+the tested regime, and show that the $\dr$-mod-$9$ classification is
+a sensitive empirical probe that does \emph{not} reveal deviations
+from the Hardy--Littlewood prediction.
 \end{abstract}
 
 \subjclass[2020]{11N05, 11N13, 11Y11}
@@ -496,6 +500,51 @@ regimes ($X \le 10^7$ for the family $g=18k$, $X \le 10^8$ for twin
 primes), there is no evidence of systematic deviations from
 Hardy--Littlewood in arithmetic progressions}.
 
+\subsection{On the magnitude of the empirical error}
+
+The observed deviation $|\rho(g; X) - 1| \le 0.0015$ at $X = 5 \cdot 10^7$
+is consistent with an error term of size $X^{-1/2} \log X \approx 0.0024$.
+This square-root behaviour is the natural prediction of the Cram\'er
+random model of the primes, although that model is known to fail in
+some regimes \cite{Mai85}.
+
+For the twin primes conjecture, the same scaling has been verified
+empirically at much larger scales: at $X = 10^{18}$, the discrepancy
+between the empirical count $\pi_2(10^{18}) = 808{,}675{,}888{,}577{,}436$
+and the Hardy--Littlewood prediction $\approx 808{,}675{,}901{,}493{,}606$
+is of order $\sqrt{N}/2 \approx 1.3 \cdot 10^7$, consistent with our
+observation at smaller scale.
+
+Rigorous evidence for a power-saving error term in the
+Hardy--Littlewood prediction comes from the function-field analogue.
+Keating--Rudnick \cite{KR14} established that, for primes in residue
+classes modulo a squarefree $Q \in \mathbb{F}_q[T]$ with $q \to \infty$,
+the variance
+\[
+  G(n; Q) = \sum_{\substack{A \bmod Q \\ \gcd(A,Q)=1}}
+  \Bigl| \Psi(n; Q, A) - \frac{q^n}{\Phi(Q)} \Bigr|^2
+  \;\sim\; q^n (\deg Q - 1),
+\]
+which is the function-field analogue of Hooley's conjecture
+$G(X, Q) \sim X \log Q$ on the variance of primes in arithmetic
+progressions over $\mathbb{Z}$. More directly relevant to the
+present empirical setup, Sawin--Shusterman \cite[Theorem 1.1]{SS22}
+established the quantitative twin prime conjecture over
+$\mathbb{F}_q[T]$ with a power saving: for an odd prime $p$, a power
+$q$ of $p$ with $q > 685090\, p^2$, and any nonzero $h \in \mathbb{F}_q[T]$,
+\[
+  \#\{f \in \mathbb{F}_q[T] : |f| = X,\ f \text{ and } f+h \text{ are prime}\}
+  \;\sim\; \mathfrak{S}_q(h) \, \frac{X}{\log_q^2(X)}
+\]
+with a power saving in $X$ (depending on $q$). Translating the
+function-field savings to the integer setting via the standard
+dictionary suggests that an error term of size $X^{1/2 + o(1)}$ in
+the Hardy--Littlewood asymptotic for prime pairs over $\mathbb{Z}$
+is the natural conjectural target, in line with the present
+empirical observation. No analogous explicit secondary-asymptotic
+formula $E(x; g, q, a)$ over $\mathbb{Z}$ appears in the published
+literature \cite{MO_question}.
+
 \subsection{Limits}
 
 The present work provides no unconditional result: the entire
@@ -552,14 +601,24 @@ All scripts (\texttt{compute\_twins\_dr9.py},
 generated CSV files are publicly available on GitHub at
 \url{https://github.com/gferraiuolo2/prime-pairs-mod9}
 and permanently archived on Zenodo
-(\href{https://doi.org/10.5281/zenodo.20117271}{DOI:~10.5281/zenodo.20117271}),
+(\href{https://doi.org/10.5281/zenodo.20117270}{DOI:~10.5281/zenodo.20117270}),
 together with a \texttt{README} documenting execution parameters and
 dependencies (\texttt{numpy}, \texttt{scipy}, \texttt{matplotlib}).
 The Python source code is released under the MIT License; datasets,
 figures, and the paper text are released under CC-BY-4.0.
 
 \subsection*{Acknowledgments}
-[Insert acknowledgments if any.]
+The author thanks Will Sawin (Columbia University) for valuable
+comments on MathOverflow \cite{MO_question}, in particular for
+pointing to the empirical benchmark for twin primes at $X = 10^{18}$
+and to the function-field analogues established in \cite{SS22},
+which provide the rigorous context for the empirical error term
+observed here.
+
+This work made use of AI assistance (Anthropic Claude) for code
+review, LaTeX formatting, and bibliographic search; all mathematical
+content, experimental design, and intellectual decisions are those of
+the author.
 
 \begin{thebibliography}{99}
 
@@ -591,6 +650,29 @@ D.~H.~J.~Polymath,
 many primes},
 Research in the Mathematical Sciences \textbf{1} (2014), 12.
 
+\bibitem{Mai85}
+H.~Maier,
+\emph{Primes in short intervals},
+Michigan Math. J. \textbf{32} (1985), no.~2, 221--225.
+
+\bibitem{KR14}
+J.~P.~Keating, Z.~Rudnick,
+\emph{The variance of the number of prime polynomials in short
+intervals and in residue classes},
+Int. Math. Res. Not. IMRN \textbf{2014}, no.~1, 259--288.
+
+\bibitem{SS22}
+W.~Sawin, M.~Shusterman,
+\emph{On the Chowla and twin primes conjectures over $\mathbb{F}_q[T]$},
+Annals of Math. (2) \textbf{196} (2022), no.~2, 457--506.
+
+\bibitem{MO_question}
+G.~Ferraiuolo,
+\emph{Empirical convergence rate of the Hardy--Littlewood prediction
+for prime pairs in arithmetic progressions modulo 9},
+MathOverflow question 511187 (answered by W.~Sawin),
+\url{https://mathoverflow.net/q/511187}, 2026.
+
 \bibitem{Nicely11}
 T.~R.~Nicely,
 \emph{Enumeration to $10^{14}$ of the twin primes and Brun's constant},
@@ -601,7 +683,7 @@ $10^{18}$ available in public archives (cf.\ OEIS A001097).
 G.~Ferraiuolo,
 \emph{Scripts and data for: Modulo 9 classification of prime pairs $(p, p+g)$},
 GitHub repository: \url{https://github.com/gferraiuolo2/prime-pairs-mod9};
-Zenodo archive: \href{https://doi.org/10.5281/zenodo.20117271}{DOI:~10.5281/zenodo.20117271},
+Zenodo archive: \href{https://doi.org/10.5281/zenodo.20117270}{DOI:~10.5281/zenodo.20117270},
 2026.
 
 \end{thebibliography}

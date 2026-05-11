@@ -169,7 +169,8 @@ predicted by the formula H(g) = 2*C2 * prod_{p | g, p>2} (p-1)/(p-2).
 
 ## Citation
 
-If you use this material, please cite the Zenodo archive:
+If you use this material, please cite the Zenodo archive using the
+**Concept DOI**, which always resolves to the latest version:
 
 > Ferraiuolo, G. (2026). *Modulo 9 classification of prime pairs
 > (p, p+g): an empirical verification of the Hardy–Littlewood
@@ -190,6 +191,16 @@ BibTeX entry:
   url          = {https://doi.org/10.5281/zenodo.20117270}
 }
 ```
+
+### Versioning
+
+This repository uses Zenodo's versioning system:
+
+- **Concept DOI** (recommended for citations): `10.5281/zenodo.20117270`
+  — always points to the most recent version.
+- **Version DOIs** identify specific releases; use them only when
+  citing a particular snapshot is essential for reproducibility.
+  The list of all versions is available on the Zenodo record page.
 
 ## Licensing
 
