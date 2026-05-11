@@ -1,6 +1,6 @@
 # Paper: Modulo 9 classification of prime pairs $(p, p+18k)$
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20117271.svg)](https://doi.org/10.5281/zenodo.20117271)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20117270.svg)](https://doi.org/10.5281/zenodo.20117270)
 [![License: MIT](https://img.shields.io/badge/Code-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![License: CC BY 4.0](https://img.shields.io/badge/Data%20%26%20Paper-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
@@ -174,7 +174,7 @@ If you use this material, please cite the Zenodo archive:
 > Ferraiuolo, G. (2026). *Modulo 9 classification of prime pairs
 > (p, p+g): an empirical verification of the Hardy–Littlewood
 > conjecture for g = 18k.* Zenodo.
-> <https://doi.org/10.5281/zenodo.20117271>
+> <https://doi.org/10.5281/zenodo.20117270>
 
 BibTeX entry:
 
@@ -186,8 +186,8 @@ BibTeX entry:
                   conjecture for g = 18k},
   year         = 2026,
   publisher    = {Zenodo},
-  doi          = {10.5281/zenodo.20117271},
-  url          = {https://doi.org/10.5281/zenodo.20117271}
+  doi          = {10.5281/zenodo.20117270},
+  url          = {https://doi.org/10.5281/zenodo.20117270}
 }
 ```
 
