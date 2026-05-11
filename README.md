@@ -5,7 +5,7 @@
 [![License: CC BY 4.0](https://img.shields.io/badge/Data%20%26%20Paper-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
 **GitHub**: <https://github.com/gferraiuolo2/prime-pairs-mod9>  
-**Zenodo (DOI)**: <https://doi.org/10.5281/zenodo.20117271>  
+**Zenodo (DOI)**: <https://doi.org/10.5281/zenodo.20117270>  
 **Contact**: g.ferraiuolo2@gmail.com
 
 ---
@@ -214,7 +214,7 @@ Suggested citation for any reuse:
 > Ferraiuolo, G. (2026). *Modulo 9 classification of prime pairs
 > (p, p+g): an empirical verification of the Hardy–Littlewood
 > conjecture for g = 18k.* Zenodo.
-> <https://doi.org/10.5281/zenodo.20117271>
+> <https://doi.org/10.5281/zenodo.20117270>
 
 ## Contact
 
