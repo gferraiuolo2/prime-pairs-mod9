@@ -162,6 +162,31 @@ predicted by the formula H(g) = 2*C2 * prod_{p | g, p>2} (p-1)/(p-2).
 If you use this material, please cite the paper as [reference to be
 inserted upon publication].
 
+## Licensing
+
+This repository uses a **dual-license** scheme that is standard for
+research compendia:
+
+| Content | License | File |
+|---------|---------|------|
+| Python source code (`scripts/*.py`) | MIT License | `LICENSE` |
+| Datasets (`data/*.csv`), figures (`figures/*`), paper (`paper_v6_en.{tex,pdf}`) | Creative Commons Attribution 4.0 International (CC-BY-4.0) | `LICENSE-data` |
+
+In short:
+
+- You may use, modify, and redistribute the **code** under MIT terms
+  (attribution appreciated, not legally required for derivative code).
+- You may share and adapt the **data, figures, and paper text** under
+  CC-BY-4.0, provided you give appropriate credit (citation, link to
+  license, indication of changes).
+
+Suggested citation for any reuse:
+
+> Ferraiuolo, G. (2026). *Modulo 9 classification of prime pairs
+> (p, p+g): an empirical verification of the Hardy–Littlewood
+> conjecture for g = 18k.* Zenodo.
+> [https://doi.org/10.5281/zenodo.XXXXXXX](https://doi.org/10.5281/zenodo.XXXXXXX)
+
 ## Contact
 
 Giovanni Ferraiuolo — g.ferraiuolo2@gmail.com
